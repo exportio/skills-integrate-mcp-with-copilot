@@ -29,16 +29,9 @@ header h1 {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 30px;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
+  justify-items: center;
 }
 
 section {
@@ -47,7 +40,41 @@ section {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
+  max-width: 900px;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+}
+
+.register-btn:hover:not(:disabled) {
+  background-color: #388e3c;
+}
+
+.register-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.helper-text {
+  margin-top: -10px;
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 0.95rem;
 }
 
 section h3 {
